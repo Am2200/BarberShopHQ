@@ -6,6 +6,7 @@ gem "activerecord"
 gem "sinatra-activerecord"
 gem "sinatra-contrib"
 
+# Когда гем нужен только для разработки
 group :development do
-  gem "tux"
+  gem "tux" # В переводе смокинг
 end
