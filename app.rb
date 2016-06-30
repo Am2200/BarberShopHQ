@@ -6,7 +6,7 @@ require 'sinatra/activerecord'
 
 set :database, 'sqlite3:barbershop.db'
 
-
+# Сущность клиента
 class Client < ActiveRecord::Base
 	
 end
