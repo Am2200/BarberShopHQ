@@ -19,8 +19,12 @@ ActiveRecord::Schema.define(version: 20160710185806) do
     t.datetime "updated_at"
   end
 
-  create_table "client", force: :cascade do |t|
+  create_table "clients", force: :cascade do |t|
     t.text     "name"
+    t.text     "phone"
+    t.text     "datestamp"
+    t.text     "barber"
+    t.text     "color"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
