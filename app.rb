@@ -18,3 +18,24 @@ get '/' do
 	@barbers = Barber.all
 	erb :index
 end
+
+get '/contacts' do
+  @clients = Client.all
+	erb :contacts
+end
+
+get '/visit' do
+  @barbers = Barber.all
+  erb :visit
+end
+
+post '/visit' do
+  newClient = Client.new
+  newClient.name  		= params[:username]
+  newClient.phone 		= params[:phone]
+  newClient.datestamp = params[:datetime]
+  newClient.barber		= params[:barber]
+  newClient.color			= params[:color]
+  newClient.save
+  redirect to ('/')
+end
