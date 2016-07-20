@@ -4,7 +4,11 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'sinatra/activerecord'
 
-set :database, 'sqlite3:barbershop.db'
+configure do
+	set :database, "sqlite3:barbershop.db"
+end
+
+#p ActiveRecord::Base.connected?
 
 # Сущность клиента
 class Client < ActiveRecord::Base
