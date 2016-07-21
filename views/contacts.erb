@@ -1,4 +1,6 @@
 <h2>Наши клиенты:</h2>
 <% @clients.each do |client| %>
-<%= client.name %><br/>
+<p>
+ Name: <%= client.name %> Phone: <%= client.phone %> Date: <%= client.datestamp %> Barber: <%= client.barber %> Color: <%= client.color %><br/>
+</p>
 <% end %>
